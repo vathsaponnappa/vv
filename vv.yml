@@ -3,19 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies
-      - mvn install
-
+      - echo Installing...
+      - npm install
   build:
     commands:
-      - echo Building the project
-      - mvn package
-
-  post_build:
-    commands:
-      - echo Running Unit Tests   
-      - mvn test
-
+      - echo Building...
+      - npm run build
 artifacts:
   files:
-    - target/*.jar
+    - '**/*'
